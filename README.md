@@ -55,6 +55,38 @@ Install dependencies:
 pip install -r requirements.txt
 
 
+Installation de Docker et dépendances :
+sudo apt install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+
+
+nstallation de Python et création de l’environnement virtuel:
+sudo apt install python3-venv
+
+
+Création et activation de l’environnement virtuel :
+python3 -m venv venv
+source venv/bin/activate
+
+
+nstallation de Flask et Docker SDK :
+pip install flask docker
+pip freeze > requirements.txt
+
+
+Développement du backend Flask:
+nano app.py
+
+
+Développement de l’interface web:
+nano templates/index.html
+
+
+Page Nginx personnalisée:
+nano nginx/index.html
+
+
 Start Docker daemon (if not running):
 sudo systemctl start docker
 
