@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: #e5e7eb;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    background: #020617;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+.create-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.create-form input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+.create-form button {
+    background: #22c55e;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.create-form button:hover {
+    background: #16a34a;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #020617;
+    border-bottom: 1px solid #1e293b;
+}
+
+tr:nth-child(even) {
+    background: #020617;
+}
+
+tr:hover {
+    background: #020617;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status.running {
+    background: #22c55e;
+    color: black;
+}
+
+.status.stopped {
+    background: #ef4444;
+    color: white;
+}
+
+.actions .btn {
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 0 3px;
+}
+
+.btn.start {
+    background: #3b82f6;
+    color: white;
+}
+
+.btn.stop {
+    background: #f59e0b;
+    color: black;
+}
+
+.btn.delete {
+    background: #dc2626;
+    color: white;
+}
+

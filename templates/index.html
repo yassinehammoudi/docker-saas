@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Docker SAAS Manager</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🐳 Docker SAAS Manager</h1>
+    <p class="subtitle">Manage Nginx containers from a web interface</p>
+
+    <form class="create-form" method="POST" action="/create">
+        <input type="text" name="name" placeholder="Container name" required>
+        <button type="submit">➕ Create Nginx Container</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for c in containers %}
+            <tr>
+                <td>{{ c.name }}</td>
+                <td>
+                    {% if c.status == "running" %}
+                        <span class="status running">RUNNING</span>
+                    {% else %}
+                        <span class="status stopped">STOPPED</span>
+                    {% endif %}
+                </td>
+                <td class="actions">
+                    <a class="btn start" href="/start/{{ c.id }}">Start</a>
+                    <a class="btn stop" href="/stop/{{ c.id }}">Stop</a>
+                    <a class="btn delete" href="/delete/{{ c.id }}"
+                       onclick="return confirm('Delete this container?')">
+                       Delete
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
+
